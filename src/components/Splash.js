@@ -3,6 +3,7 @@ import { View, StyleSheet } from "react-native";
 import { Spinner } from "native-base";
 import { black, pink, red } from "../themes/colors";
 import { resetNavigationStack } from "../utils/common";
+import { ScreenContainer } from "../commonComponents";
 
 const Splash = (props) => {
   useEffect(() => {
@@ -12,10 +13,12 @@ const Splash = (props) => {
   }, []);
 
   return (
-    <View style={styles.loginScreenContainer}>
-      <View style={styles.CircleStyle} />
-      <Spinner color={red} />
-    </View>
+    <ScreenContainer>
+      <View style={styles.loginScreenContainer}>
+        <View style={styles.CircleStyle} />
+        <Spinner color={red} />
+      </View>
+    </ScreenContainer>
   );
 };
 
