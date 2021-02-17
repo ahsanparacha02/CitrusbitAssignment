@@ -59,12 +59,12 @@ const Home = (props) => {
 
   const renderList = ({ item }) => {
     return (
-      <Card style={{ backgroundColor: lightBlack, margin: 50 }}>
-        <CardItem>
+      <Card>
+        <CardItem style={{ backgroundColor: lightBlack }}>
           <Left>
             <Thumbnail source={{ uri: item.thumbnailUrl }} />
             <Body>
-              <Text>{item.title}</Text>
+              <Text style={styles.headerLable}>{item.title}</Text>
             </Body>
           </Left>
         </CardItem>
@@ -75,10 +75,7 @@ const Home = (props) => {
           }}
         >
           <CardItem cardBody>
-            <Image
-              source={{ uri: item.url }}
-              style={{ height: 150, width: null, flex: 1 }}
-            />
+            <Image source={{ uri: item.url }} style={styles.image} />
           </CardItem>
         </TouchableOpacity>
       </Card>
@@ -110,6 +107,15 @@ const styles = StyleSheet.create({
   label: {
     color: white,
     fontSize: 18,
+  },
+  image: {
+    height: 200,
+    width: null,
+    flex: 1,
+  },
+  headerLable: {
+    fontWeight: "bold",
+    color: white,
   },
 });
 

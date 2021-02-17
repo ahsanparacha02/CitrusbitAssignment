@@ -96,6 +96,7 @@ const Home = (props) => {
     </ScreenContainer>
   );
 };
+
 const styles = StyleSheet.create({
   listContainer: {
     marginHorizontal: 10,

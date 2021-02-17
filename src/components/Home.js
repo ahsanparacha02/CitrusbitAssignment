@@ -22,9 +22,6 @@ const Home = (props) => {
     onGetAllUsers();
   }, []);
 
-  const change = (x) => {
-    return x * 2;
-  };
   const onGetAllUsers = () => {
     const { onGetUsers } = props.actions;
     setLoading(true);
