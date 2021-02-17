@@ -38,7 +38,6 @@ const Home = (props) => {
     setLoading(true);
     onGetPhotos()
       .then((res) => {
-        debugger;
         const photoList = res.filter((item) => {
           return item.albumId === selectedAlbum.id;
         });

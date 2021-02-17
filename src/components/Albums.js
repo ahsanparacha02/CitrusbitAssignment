@@ -31,7 +31,6 @@ const Home = (props) => {
     setLoading(true);
     onGetAlbums()
       .then((res) => {
-        debugger;
         const albums = res.filter((item) => {
           return item.userId === selectedUser.id;
         });
